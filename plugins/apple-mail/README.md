@@ -67,7 +67,7 @@ The skill will be available as `$apple-mail` or invoked automatically when you a
 
 ### Cursor
 
-Install as an [Agent Skill](https://cursor.com/docs/context/rules) (requires Nightly channel):
+Install as an [Agent Skill](https://cursor.com/docs/context/skills) (requires Nightly channel):
 
 ```bash
 # Clone to your project or user skills directory
@@ -217,5 +217,5 @@ Created by [Robert Bouschery](https://github.com/rbouschery)
 
 - [Agent Skills Standard](https://github.com/anthropics/agent-skills)
 - [OpenAI Codex Skills](https://developers.openai.com/codex/skills/)
-- [Cursor Agent Skills](https://cursor.com/docs/context/rules)
+- [Cursor Agent Skills](https://cursor.com/docs/context/skills)
 - [Gemini CLI Skills](https://geminicli.com/docs/cli/skills/)
