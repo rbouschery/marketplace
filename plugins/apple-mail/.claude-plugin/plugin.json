@@ -15,6 +15,5 @@
     "email",
     "applescript",
     "automation"
-  ],
-  "platforms": ["darwin"]
+  ]
 }
