@@ -1,6 +1,12 @@
-# Apple Mail Plugin for Claude Code
+# Apple Mail Agent Skill
 
-A Claude Code plugin that enables interaction with Apple Mail on macOS. Read, send, search, and manage emails directly through Claude.
+An agent skill for agentic coding systems that enables interaction with Apple Mail on macOS. Read, send, search, and manage emails directly through your AI coding assistant.
+
+## What is an Agent Skill?
+
+Agent skills are self-contained packages that extend AI coding assistants with specialized capabilities. This skill follows the [Agent Skills open standard](https://github.com/anthropics/agent-skills), making it compatible with multiple agentic coding tools including Claude Code, OpenAI Codex CLI, Cursor, and Google Gemini CLI.
+
+Unlike general context files, skills are loaded dynamically when the agent identifies a relevant task—keeping your context window clean while providing on-demand expertise.
 
 ## Features
 
@@ -14,34 +20,86 @@ A Claude Code plugin that enables interaction with Apple Mail on macOS. Read, se
 
 - macOS (uses AppleScript via `osascript`)
 - Apple Mail configured with at least one email account
-- Claude Code CLI
 
 ## Installation
 
-### Option 1: Marketplace (Easiest)
+### Claude Code (Plugin)
+
+The easiest way to install for Claude Code users:
 
 ```bash
-# Add the Sempervirens Labs marketplace
+# Option A: Via marketplace
 /plugin marketplace add rbouschery/marketplace
-
-# Install the Apple Mail plugin
 /plugin install apple-mail@rbouschery-marketplace
-```
 
-### Option 2: Direct Install
-
-```bash
+# Option B: Direct install
 /plugin install rbouschery/marketplace:apple-mail
 ```
 
-### Option 3: Manual Clone
+<details>
+<summary>Manual installation</summary>
 
 ```bash
 mkdir -p ~/.claude/plugins
 cd ~/.claude/plugins
 git clone https://github.com/rbouschery/marketplace.git
-# Plugin available at plugins/apple-mail
+# Skill available at plugins/apple-mail/skills/apple-mail/
 ```
+
+</details>
+
+### OpenAI Codex CLI
+
+Install as a [user-scoped skill](https://developers.openai.com/codex/skills/):
+
+```bash
+# Clone to your Codex skills directory
+mkdir -p ~/.codex/skills
+cd ~/.codex/skills
+git clone https://github.com/rbouschery/marketplace.git temp-marketplace
+mv temp-marketplace/plugins/apple-mail/skills/apple-mail ./apple-mail
+rm -rf temp-marketplace
+
+# Restart Codex to pick up the new skill
+```
+
+The skill will be available as `$apple-mail` or invoked automatically when you ask about email.
+
+### Cursor
+
+Install as an [Agent Skill](https://cursor.com/docs/context/rules) (requires Nightly channel):
+
+```bash
+# Clone to your project or user skills directory
+mkdir -p .cursor/skills  # or ~/.cursor/skills for global
+cd .cursor/skills
+git clone https://github.com/rbouschery/marketplace.git temp-marketplace
+mv temp-marketplace/plugins/apple-mail/skills/apple-mail ./apple-mail
+rm -rf temp-marketplace
+```
+
+Enable Agent Skills in Cursor Settings > Beta > Nightly channel.
+
+### Google Gemini CLI
+
+Install as a [workspace or user skill](https://geminicli.com/docs/cli/skills/):
+
+```bash
+# For workspace-specific (committed to repo)
+mkdir -p .gemini/skills
+cd .gemini/skills
+
+# Or for user-global
+mkdir -p ~/.gemini/skills
+cd ~/.gemini/skills
+
+# Clone the skill
+git clone https://github.com/rbouschery/marketplace.git temp-marketplace
+mv temp-marketplace/plugins/apple-mail/skills/apple-mail ./apple-mail
+rm -rf temp-marketplace
+```
+
+Enable Agent Skills via `/settings` in Gemini CLI, then toggle "Agent Skills" to true.
 
 ## First Run
 
@@ -49,11 +107,11 @@ On first use, macOS will prompt for Automation permissions. Go to:
 
 **System Settings > Privacy & Security > Automation**
 
-And allow Terminal (or your terminal app) to control Apple Mail.
+And allow your terminal app to control Apple Mail.
 
 ## Usage
 
-Once installed, Claude Code will automatically use this skill when you ask about email. Examples:
+Once installed, your AI assistant will automatically use this skill when you ask about email. Examples:
 
 ```
 "Show me my recent emails"
@@ -86,7 +144,7 @@ Once installed, Claude Code will automatically use this skill when you ask about
 
 ## Manual Script Usage
 
-Scripts can also be run directly from the plugin directory:
+Scripts can also be run directly:
 
 ```bash
 # List accounts
@@ -115,11 +173,10 @@ Email format: `id<<>>subject<<>>sender<<>>to<<>>cc<<>>bcc<<>>dateSent<<>>isRead<
 ```
 apple-mail/
 ├── .claude-plugin/
-│   ├── plugin.json           # Plugin manifest
-│   └── marketplace.json      # Marketplace catalog
+│   └── plugin.json           # Claude Code plugin manifest
 ├── skills/
 │   └── apple-mail/
-│       └── SKILL.md          # Skill definition
+│       └── SKILL.md          # Skill definition (Agent Skills standard)
 ├── scripts/                  # Executable shell scripts
 │   ├── list-accounts.sh
 │   ├── get-emails.sh
@@ -155,3 +212,10 @@ MIT License - see LICENSE file for details.
 ## Credits
 
 Created by [Robert Bouschery](https://github.com/rbouschery)
+
+## References
+
+- [Agent Skills Standard](https://github.com/anthropics/agent-skills)
+- [OpenAI Codex Skills](https://developers.openai.com/codex/skills/)
+- [Cursor Agent Skills](https://cursor.com/docs/context/rules)
+- [Gemini CLI Skills](https://geminicli.com/docs/cli/skills/)
