@@ -125,6 +125,15 @@ Once installed, your AI assistant will automatically use this skill when you ask
 "Delete the spam emails"
 ```
 
+### Building Custom Skills
+
+Use this skill as a building block for your own automated workflows. Create skills that combine email capabilities with other tools:
+
+- **Auto-draft replies** - Analyze incoming emails and draft contextual responses
+- **Spam clearing** - Periodically identify and archive/delete unwanted emails
+- **Email summaries** - Generate daily digests of important messages
+- **Follow-up reminders** - Track emails awaiting responses
+
 ## Available Scripts
 
 | Script | Purpose |
