@@ -67,7 +67,9 @@ The skill will be available as `$apple-mail` or invoked automatically when you a
 
 ### Cursor
 
-Install as an [Agent Skill](https://cursor.com/docs/context/skills) (requires Nightly channel):
+Cursor [automatically discovers skills](https://cursor.com/docs/context/skills) from `~/.claude/skills/`, so if you've already installed a Claude Code skill, Cursor will auto-load it (requires Nightly channel).
+
+To install manually:
 
 ```bash
 # Clone to your project or user skills directory
