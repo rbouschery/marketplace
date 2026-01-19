@@ -1,0 +1,20 @@
+{
+  "name": "apple-mail",
+  "description": "Interact with Apple Mail on macOS. Read, send, search, and manage emails directly through Claude.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Robert Bouschery",
+    "url": "https://github.com/rbouschery"
+  },
+  "repository": "https://github.com/rbouschery/marketplace",
+  "homepage": "https://github.com/rbouschery/marketplace/tree/main/plugins/apple-mail",
+  "license": "MIT",
+  "keywords": [
+    "apple-mail",
+    "macos",
+    "email",
+    "applescript",
+    "automation"
+  ],
+  "platforms": ["darwin"]
+}

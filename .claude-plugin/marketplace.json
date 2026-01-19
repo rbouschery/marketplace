@@ -1,0 +1,21 @@
+{
+  "name": "rbouschery-marketplace",
+  "description": "Claude Code plugins and skills by Robert Bouschery",
+  "owner": {
+    "name": "Robert Bouschery",
+    "url": "https://github.com/rbouschery"
+  },
+  "plugins": [
+    {
+      "name": "apple-mail",
+      "source": "./plugins/apple-mail",
+      "description": "Interact with Apple Mail on macOS. Read, send, search, and manage emails.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Robert Bouschery"
+      },
+      "homepage": "https://github.com/rbouschery/marketplace/tree/main/plugins/apple-mail",
+      "license": "MIT"
+    }
+  ]
+}
