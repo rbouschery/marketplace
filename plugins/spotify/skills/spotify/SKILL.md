@@ -1,7 +1,7 @@
 ---
 name: control
 description: Control Spotify on macOS. Use for playing music, controlling playback, and getting track information.
-allowed-tools: Bash, Read
+allowed-tools: Bash, Read, WebSearch
 ---
 
 # Spotify Mac Skill
@@ -10,7 +10,7 @@ This skill provides commands to control Spotify on macOS via AppleScript.
 
 ## Available Scripts
 
-All scripts are in the `../../scripts/` directory (relative to this file). Execute them via bash from the plugin root.
+All scripts are in the `./scripts/` directory (relative to this file). Execute them via bash from the plugin root.
 
 ### Playback Control
 
@@ -107,104 +107,104 @@ shuffling<<>>repeating
 ### Basic Playback
 ```bash
 # Play/pause
-../../scripts/play.sh
-../../scripts/pause.sh
-../../scripts/toggle-playback.sh
+./scripts/play.sh
+./scripts/pause.sh
+./scripts/toggle-playback.sh
 
 # Navigation
-../../scripts/next-track.sh
-../../scripts/previous-track.sh
+./scripts/next-track.sh
+./scripts/previous-track.sh
 ```
 
 ### Search and Play (Agent-Assisted)
 ```bash
 # Agent searches web for: site:open.spotify.com bohemian rhapsody
 # Gets URL from results, then plays:
-../../scripts/play-uri.sh "https://open.spotify.com/track/6l8GvAyoUZwWDgF1e4822w"
+./scripts/play-uri.sh "https://open.spotify.com/track/6l8GvAyoUZwWDgF1e4822w"
 
 # Works for any content type:
-../../scripts/play-uri.sh "https://open.spotify.com/playlist/37i9dQZF1DXaXB8fQg7xif"
-../../scripts/play-uri.sh "https://open.spotify.com/album/3BHe7LbW5yRjyqXNJ3A6mW"
+./scripts/play-uri.sh "https://open.spotify.com/playlist/37i9dQZF1DXaXB8fQg7xif"
+./scripts/play-uri.sh "https://open.spotify.com/album/3BHe7LbW5yRjyqXNJ3A6mW"
 ```
 
 ### Visual Search (Opens Spotify App)
 ```bash
-../../scripts/search.sh "bohemian rhapsody"
-../../scripts/search.sh "artist:queen"
-../../scripts/search.sh "playlist:hot country"
+./scripts/search.sh "bohemian rhapsody"
+./scripts/search.sh "artist:queen"
+./scripts/search.sh "playlist:hot country"
 ```
 
 ### Play Specific Content
 ```bash
 # Play a track
-../../scripts/play-uri.sh "spotify:track:4uLU6hMCjMI75M1A2tKUQC"
+./scripts/play-uri.sh "spotify:track:4uLU6hMCjMI75M1A2tKUQC"
 
 # Play an album
-../../scripts/play-uri.sh "spotify:album:7ppypgQppMf3mkRbZxYIFM"
+./scripts/play-uri.sh "spotify:album:7ppypgQppMf3mkRbZxYIFM"
 
 # Play a playlist
-../../scripts/play-uri.sh "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
+./scripts/play-uri.sh "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
 
 # Play track in album context (enables album queue)
-../../scripts/play-uri.sh "spotify:track:xxx" "spotify:album:yyy"
+./scripts/play-uri.sh "spotify:track:xxx" "spotify:album:yyy"
 ```
 
 ### Get Track Information
 ```bash
 # Get current track details
-../../scripts/get-current-track.sh
+./scripts/get-current-track.sh
 # Output: Song Name<<>>Artist<<>>Album<<>>Album Artist<<>>180<<>>45<<>>1<<>>1<<>>spotify:track:xxx<<>>https://open.spotify.com/track/xxx<<>>https://i.scdn.co/image/xxx<<>>75
 
 # Get player state
-../../scripts/get-player-state.sh
+./scripts/get-player-state.sh
 # Output: playing<<>>45.5<<>>75<<>>false<<>>true
 ```
 
 ### Volume Control
 ```bash
 # Get current volume
-../../scripts/get-volume.sh
+./scripts/get-volume.sh
 
 # Set specific volume
-../../scripts/set-volume.sh 50
+./scripts/set-volume.sh 50
 
 # Adjust volume
-../../scripts/volume-up.sh
-../../scripts/volume-down.sh
+./scripts/volume-up.sh
+./scripts/volume-down.sh
 ```
 
 ### Seeking
 ```bash
 # Get current position
-../../scripts/get-position.sh
+./scripts/get-position.sh
 
 # Jump to 30 seconds
-../../scripts/set-position.sh 30
+./scripts/set-position.sh 30
 
 # Skip forward/backward 10 seconds
-../../scripts/fast-forward.sh
-../../scripts/rewind.sh
+./scripts/fast-forward.sh
+./scripts/rewind.sh
 ```
 
 ### Shuffle and Repeat
 ```bash
 # Toggle modes
-../../scripts/toggle-shuffle.sh
-../../scripts/toggle-repeat.sh
+./scripts/toggle-shuffle.sh
+./scripts/toggle-repeat.sh
 
 # Check current modes
-../../scripts/get-modes.sh
+./scripts/get-modes.sh
 # Output: true<<>>false
 ```
 
 ### App Control
 ```bash
 # Check if running
-../../scripts/is-running.sh
+./scripts/is-running.sh
 
 # Launch/quit
-../../scripts/launch.sh
-../../scripts/quit.sh
+./scripts/launch.sh
+./scripts/quit.sh
 ```
 
 ## Parsing Output
@@ -257,4 +257,4 @@ For these features, use the Spotify Web API (requires Premium + OAuth).
 
 ## Reference
 
-For advanced AppleScript patterns and customization, see `../../reference/applescript-patterns.md`.
+For advanced AppleScript patterns and customization, see `./reference/applescript-patterns.md`.
