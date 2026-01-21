@@ -34,10 +34,10 @@ The easiest way to install for Claude Code users:
 ```bash
 # Option A: Via marketplace
 /plugin marketplace add rbouschery/marketplace
-/plugin install spotify-mac-skill-apple-script@rbouschery-marketplace
+/plugin install spotify@rbouschery-marketplace
 
 # Option B: Direct install
-/plugin install rbouschery/marketplace:spotify-mac-skill-apple-script
+/plugin install rbouschery/marketplace:spotify
 ```
 
 <details>
@@ -47,7 +47,7 @@ The easiest way to install for Claude Code users:
 mkdir -p ~/.claude/plugins
 cd ~/.claude/plugins
 git clone https://github.com/rbouschery/marketplace.git
-# Skill available at plugins/spotify-mac-skill-apple-script/skills/spotify-mac-skill-apple-script/
+# Skill available at plugins/spotify/skills/control/
 ```
 
 </details>
@@ -60,7 +60,7 @@ Install as a [user-scoped skill](https://developers.openai.com/codex/skills/):
 mkdir -p ~/.codex/skills
 cd ~/.codex/skills
 git clone https://github.com/rbouschery/marketplace.git temp-marketplace
-mv temp-marketplace/plugins/spotify-mac-skill-apple-script/skills/spotify-mac-skill-apple-script ./spotify
+mv temp-marketplace/plugins/spotify/skills/control ./spotify
 rm -rf temp-marketplace
 ```
 
@@ -76,7 +76,7 @@ To install manually:
 mkdir -p .cursor/skills  # or ~/.cursor/skills for global
 cd .cursor/skills
 git clone https://github.com/rbouschery/marketplace.git temp-marketplace
-mv temp-marketplace/plugins/spotify-mac-skill-apple-script/skills/spotify-mac-skill-apple-script ./spotify
+mv temp-marketplace/plugins/spotify/skills/control ./spotify
 rm -rf temp-marketplace
 ```
 
@@ -92,7 +92,7 @@ mkdir -p ~/.gemini/skills
 cd ~/.gemini/skills
 
 git clone https://github.com/rbouschery/marketplace.git temp-marketplace
-mv temp-marketplace/plugins/spotify-mac-skill-apple-script/skills/spotify-mac-skill-apple-script ./spotify
+mv temp-marketplace/plugins/spotify/skills/control ./spotify
 rm -rf temp-marketplace
 ```
 
@@ -226,11 +226,11 @@ For these features, you would need the Spotify Web API (requires Premium + OAuth
 ## Project Structure
 
 ```
-spotify-mac-skill-apple-script/
+spotify/
 ├── .claude-plugin/
 │   └── plugin.json           # Claude Code plugin manifest
 ├── skills/
-│   └── spotify-mac-skill-apple-script/
+│   └── control/
 │       └── SKILL.md          # Skill definition (Agent Skills standard)
 ├── scripts/                  # Executable shell scripts
 │   ├── play.sh

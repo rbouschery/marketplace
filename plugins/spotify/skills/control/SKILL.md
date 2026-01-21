@@ -1,5 +1,5 @@
 ---
-name: spotify-mac-skill-apple-script
+name: control
 description: Control Spotify on macOS. Use for playing music, controlling playback, and getting track information.
 allowed-tools: Bash, Read
 ---
