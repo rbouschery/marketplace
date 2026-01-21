@@ -1,5 +1,5 @@
 ---
-name: control
+name: spotify
 description: Control Spotify on macOS. Use for playing music, controlling playback, and getting track information.
 allowed-tools: Bash, Read, WebSearch
 ---
