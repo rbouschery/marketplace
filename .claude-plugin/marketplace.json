@@ -16,6 +16,17 @@
       },
       "homepage": "https://github.com/rbouschery/marketplace/tree/main/plugins/apple-mail",
       "license": "MIT"
+    },
+    {
+      "name": "spotify-mac-skill-apple-script",
+      "source": "./plugins/spotify-mac-skill-apple-script",
+      "description": "Control Spotify on macOS. Play, pause, skip tracks, control volume, and get playback information.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Robert Bouschery"
+      },
+      "homepage": "https://github.com/rbouschery/marketplace/tree/main/plugins/spotify-mac-skill-apple-script",
+      "license": "MIT"
     }
   ]
 }

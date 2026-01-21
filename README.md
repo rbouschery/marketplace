@@ -27,6 +27,7 @@ Or install directly:
 | Plugin | Description | Platform |
 |--------|-------------|----------|
 | [apple-mail](./plugins/apple-mail) | Interact with Apple Mail on macOS | macOS |
+| [spotify-mac-skill-apple-script](./plugins/spotify-mac-skill-apple-script) | Control Spotify on macOS | macOS |
 
 ## Plugin Details
 
@@ -44,6 +45,22 @@ Read, send, search, and manage emails directly through Claude using Apple Mail.
 **Install:**
 ```
 /plugin install apple-mail@rbouschery-marketplace
+```
+
+### Spotify
+
+Control Spotify on macOS - play, pause, skip tracks, volume control, and get playback information. Works with free or premium accounts, no authentication required.
+
+**Features:**
+- Playback control (play, pause, skip, previous)
+- Play by URI (tracks, albums, playlists)
+- Track information and artwork
+- Volume and position control
+- Shuffle and repeat modes
+
+**Install:**
+```
+/plugin install spotify-mac-skill-apple-script@rbouschery-marketplace
 ```
 
 ## Contributing

@@ -1,0 +1,20 @@
+{
+  "name": "spotify-mac-skill-apple-script",
+  "description": "Control Spotify on macOS. Play, pause, skip tracks, control volume, and get playback information.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Robert Bouschery",
+    "url": "https://github.com/rbouschery"
+  },
+  "repository": "https://github.com/rbouschery/marketplace",
+  "homepage": "https://github.com/rbouschery/marketplace/tree/main/plugins/spotify-mac-skill-apple-script",
+  "license": "MIT",
+  "keywords": [
+    "spotify",
+    "macos",
+    "music",
+    "applescript",
+    "automation",
+    "playback"
+  ]
+}
