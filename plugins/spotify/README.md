@@ -2,11 +2,6 @@
 
 An agent skill for agentic coding systems that enables control of Spotify on macOS. Play, pause, skip tracks, and get playback information directly through your AI coding assistant.
 
-## What is an Agent Skill?
-
-Agent skills are self-contained packages that extend AI coding assistants with specialized capabilities. This skill follows the [Agent Skills open standard](https://github.com/anthropics/agent-skills), making it compatible with multiple agentic coding tools including Claude Code, OpenAI Codex CLI, Cursor, and Google Gemini CLI.
-
-Unlike general context files, skills are loaded dynamically when the agent identifies a relevant task—keeping your context window clean while providing on-demand expertise.
 
 ## Features
 
@@ -266,7 +261,9 @@ MIT License - see LICENSE file for details.
 
 ## Credits
 
-Created by [Robert Bouschery](https://github.com/rbouschery)
+Created by [Robert Bouschery](https://github.com/rbouschery) with the help of Claude.
+
+[Follow me on X ](http://twitter.com/intent/user?screen_name=RBouschery)
 
 ## References
 

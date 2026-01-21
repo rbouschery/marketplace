@@ -222,7 +222,9 @@ MIT License - see LICENSE file for details.
 
 ## Credits
 
-Created by [Robert Bouschery](https://github.com/rbouschery)
+Created by [Robert Bouschery](https://github.com/rbouschery) with the help of Claude.
+
+[Follow me on X ](http://twitter.com/intent/user?screen_name=RBouschery)
 
 ## References
 
