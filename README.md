@@ -10,6 +10,8 @@ A collection of Claude Code plugins by Robert Bouschery.
 /plugin marketplace add rbouschery/marketplace
 ```
 
+Tip: Enable auto-update to keep the plugins up to date!
+
 ### Browse and Install
 
 ```
@@ -20,6 +22,7 @@ Or install directly:
 
 ```
 /plugin install apple-mail@rbouschery-marketplace
+/plugin install spotify@rbouschery-marketplace
 ```
 
 ## Available Plugins
@@ -60,7 +63,7 @@ Control Spotify on macOS - play, pause, skip tracks, volume control, and get pla
 
 **Install:**
 ```
-/plugin install spotify-mac-skill-apple-script@rbouschery-marketplace
+/plugin install spotify@rbouschery-marketplace
 ```
 
 ## Contributing
