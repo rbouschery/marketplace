@@ -27,7 +27,7 @@ Or install directly:
 | Plugin | Description | Platform |
 |--------|-------------|----------|
 | [apple-mail](./plugins/apple-mail) | Interact with Apple Mail on macOS | macOS |
-| [spotify-mac-skill-apple-script](./plugins/spotify-mac-skill-apple-script) | Control Spotify on macOS | macOS |
+| [spotify](./plugins/spotify) | Control Spotify on macOS | macOS |
 
 ## Plugin Details
 
