@@ -10,7 +10,7 @@ This skill provides commands to interact with Apple Mail on macOS via AppleScrip
 
 ## Available Scripts
 
-All scripts are in the `../.../../scripts/` directory (relative to this file). Execute them via bash from the plugin root.
+All scripts are in the `../../scripts/` directory (relative to this file). Execute them via bash from the plugin root.
 
 ### Account & Mailbox Management
 
@@ -63,63 +63,63 @@ id<<>>subject<<>>sender<<>>to<<>>cc<<>>bcc<<>>dateSent<<>>isRead<<>>content|||
 
 ### List accounts
 ```bash
-../../scripts/list-accounts.sh
+./scripts/list-accounts.sh
 ```
 
 ### Get recent emails from INBOX
 ```bash
-../../scripts/get-emails.sh "" "INBOX" 10 false false
+./scripts/get-emails.sh "" "INBOX" 10 false false
 ```
 
 ### Get recent unread emails with content
 ```bash
-../../scripts/get-emails.sh "" "INBOX" 10 true true
+./scripts/get-emails.sh "" "INBOX" 10 true true
 ```
 
 ### Get specific email by ID
 ```bash
-../../scripts/get-email-by-id.sh 12345 "iCloud" "INBOX" true
+./scripts/get-email-by-id.sh 12345 "iCloud" "INBOX" true
 ```
 
 ### Search emails
 ```bash
-../../scripts/search-emails.sh "meeting notes" "" "" 20
+./scripts/search-emails.sh "meeting notes" "" "" 20
 ```
 
 ### Send an email
 ```bash
-../../scripts/send-email.sh "recipient@example.com" "Subject" "Body text"
+./scripts/send-email.sh "recipient@example.com" "Subject" "Body text"
 ```
 
 ### Send with CC and BCC
 ```bash
-../../scripts/send-email.sh "to@example.com" "Subject" "Body" "cc@example.com" "bcc@example.com"
+./scripts/send-email.sh "to@example.com" "Subject" "Body" "cc@example.com" "bcc@example.com"
 ```
 
 ### Create a draft
 ```bash
-../../scripts/create-draft.sh "Draft Subject" "Draft body" "recipient@example.com"
+./scripts/create-draft.sh "Draft Subject" "Draft body" "recipient@example.com"
 ```
 
 ### Reply to an email
 ```bash
-../../scripts/create-reply-draft.sh 12345 "Thanks for your message!" false "iCloud" "INBOX"
+./scripts/create-reply-draft.sh 12345 "Thanks for your message!" false "iCloud" "INBOX"
 ```
 
 ### Send the front-most draft
 ```bash
-../../scripts/send-draft.sh
+./scripts/send-draft.sh
 ```
 
 ### Archive an email
 ```bash
-../../scripts/archive-email.sh 12345 "iCloud" "INBOX"
+./scripts/archive-email.sh 12345 "iCloud" "INBOX"
 ```
 
 ### Mark as read/unread
 ```bash
-../../scripts/mark-read.sh 12345 "iCloud" "INBOX"
-../../scripts/mark-unread.sh 12345 "iCloud" "INBOX"
+./scripts/mark-read.sh 12345 "iCloud" "INBOX"
+./scripts/mark-unread.sh 12345 "iCloud" "INBOX"
 ```
 
 ## Parsing Output
@@ -152,4 +152,4 @@ done
 
 ## Reference
 
-For advanced AppleScript patterns and customization, see `../../reference/applescript-patterns.md`.
+For advanced AppleScript patterns and customization, see `./reference/applescript-patterns.md`.
