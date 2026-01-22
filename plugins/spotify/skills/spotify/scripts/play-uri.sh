@@ -33,8 +33,17 @@ if [ -n "$CONTEXT" ]; then
 tell application "Spotify"
     try
         play track "$URI" in context "$CONTEXT"
-        delay 0.5
-        return "Playing: " & name of current track & " by " & artist of current track
+        -- Wait for playback to start with retries
+        repeat 10 times
+            delay 0.3
+            if player state is playing then exit repeat
+        end repeat
+        -- Try to get track info, but don't fail if unavailable
+        try
+            return "Playing: " & name of current track & " by " & artist of current track
+        on error
+            return "Playing: (track info loading)"
+        end try
     on error errMsg
         return "ERROR:" & errMsg
     end try
@@ -45,8 +54,17 @@ else
 tell application "Spotify"
     try
         play track "$URI"
-        delay 0.5
-        return "Playing: " & name of current track & " by " & artist of current track
+        -- Wait for playback to start with retries
+        repeat 10 times
+            delay 0.3
+            if player state is playing then exit repeat
+        end repeat
+        -- Try to get track info, but don't fail if unavailable
+        try
+            return "Playing: " & name of current track & " by " & artist of current track
+        on error
+            return "Playing: (track info loading)"
+        end try
     on error errMsg
         return "ERROR:" & errMsg
     end try
